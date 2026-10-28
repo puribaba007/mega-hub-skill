@@ -1,1 +1,4 @@
 *.zip
+reel/node_modules/
+reel/.hyperframes/
+reel/renders/
