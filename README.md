@@ -1,8 +1,28 @@
-# Mega Hub — one Claude skill for 300+ skills, 140+ connectors, 140+ plugins & 140+ free tools
+<div align="center">
 
-One skill that knows the whole Claude ecosystem and sends every task to the right tool.
-It covers CEO/C-suite, marketing, YouTube, social media, trading, finance, data, coding, DevOps,
-design, 3D/graphics, video, audio, Google Workspace and documents. Free options come first.
+# 🧰 Mega Hub
+
+### One Claude skill that routes any task to 300+ skills, 140+ connectors, 140+ plugins & 140+ free AI tools
+
+![Claude Code](https://img.shields.io/badge/Claude-Code%20%26%20claude.ai-6C3BFF)
+![Skills](https://img.shields.io/badge/skills-300%2B-success)
+![Connectors](https://img.shields.io/badge/connectors-140%2B-blue)
+![Plugins](https://img.shields.io/badge/plugins-140%2B-orange)
+![Free tools](https://img.shields.io/badge/free%20tools-140%2B-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+**[Install](#install-2-minutes) · [What's inside](#whats-inside) · [How it works](#good-to-know)**
+
+</div>
+
+---
+
+> **One install. Every tool.** Mega Hub sends any task — CEO/C-suite work, marketing, YouTube,
+> social media, trading, finance, data, coding, DevOps, design, 3D/graphics, video, audio,
+> Google Workspace and documents — to the right skill, connector or free tool. **Free options come first.**
+
+Ships with a second skill, **`code-forge`**: rebuild a UI from a URL (Replica), authorized
+reverse engineering / CTF, and competitive programming (Codeforces, LeetCode, AtCoder).
 
 ## What's inside
 
