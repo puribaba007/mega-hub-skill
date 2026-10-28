@@ -1,5 +1,7 @@
 <div align="center">
 
+![Mega Hub](assets/banner.svg)
+
 # 🧰 Mega Hub
 
 ### One Claude skill that routes any task to 300+ skills, 140+ connectors, 140+ plugins & 140+ free AI tools
