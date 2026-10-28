@@ -1,38 +1,49 @@
-# Mega Hub installer - adds the free plugin marketplaces and core plugins to Claude Code.
+# Mega Hub installer - adds the official Claude plugin marketplace and the core plugins.
 # Default is a dry run (prints the commands). Run with -Apply to execute them.
 #   powershell -ExecutionPolicy Bypass -File install.ps1 -Apply
+#
+# Every plugin below is verified to exist on the official marketplace
+# (https://www.claudemarket.ai/plugins/anthropics-claude-plugins-official/<name>).
+# The marketplace token used for install is "anthropics-claude-plugins-official".
+# If your Claude Code already has the official marketplace under a different name,
+# the per-plugin URLs printed at the end let you install any of these by hand.
 param([switch]$Apply)
 
-$commands = @(
-  'claude plugin marketplace add anthropics/claude-plugins-official',
-  'claude plugin marketplace add anthropics/skills',
-  'claude plugin install document-skills@anthropic-agent-skills',
-  'claude plugin marketplace add obra/superpowers-marketplace',
-  'claude plugin install superpowers@superpowers-marketplace',
-  'claude plugin install frontend-design@claude-plugins-official',
-  'claude plugin install feature-dev@claude-plugins-official',
-  'claude plugin install pr-review-toolkit@claude-plugins-official',
-  'claude plugin install hyperframes@claude-plugins-official',
-  'claude plugin install playground@claude-plugins-official',
-  'claude plugin install mcp-server-dev@claude-plugins-official',
-  'claude plugin install chrome-devtools-mcp@claude-plugins-official',
-  'claude plugin install mattpocock-skills@claude-plugins-official',
-  'claude plugin install notion@claude-plugins-official'
+$marketplace = 'anthropics-claude-plugins-official'
+$marketplaceAdd = 'claude plugin marketplace add anthropics/claude-plugins-official'
+$plugins = @(
+  'superpowers',
+  'frontend-design',
+  'feature-dev',
+  'pr-review-toolkit',
+  'hyperframes',
+  'playground',
+  'mcp-server-dev',
+  'chrome-devtools-mcp',
+  'mattpocock-skills',
+  'notion'
 )
 
 if (-not (Get-Command claude -ErrorAction SilentlyContinue)) {
   Write-Host 'Claude Code CLI not found. Install it first: npm install -g @anthropic-ai/claude-code'
-  exit 1
+  Write-Host 'You can still install any plugin from its page (URLs printed below).'
 }
 
-foreach ($c in $commands) {
+function Run($cmd) {
   if ($Apply) {
-    Write-Host ">> $c"
-    try { Invoke-Expression $c } catch { Write-Host "   skipped: $($_.Exception.Message)" }
+    Write-Host ">> $cmd"
+    try { Invoke-Expression $cmd } catch { Write-Host "   skipped: $($_.Exception.Message)" }
   } else {
-    Write-Host "[dry run] $c"
+    Write-Host "[dry run] $cmd"
   }
 }
 
+Run $marketplaceAdd
+foreach ($p in $plugins) { Run "claude plugin install $p@$marketplace" }
+
 if (-not $Apply) { Write-Host "`nNothing installed. Re-run with -Apply to install." }
-Write-Host 'Connectors need your own sign-in: Claude app > Settings > Connectors (see references/connectors.md).'
+
+Write-Host "`nPlugin pages (install any of these by hand if a name differs):"
+foreach ($p in $plugins) { Write-Host "  $p  ->  https://www.claudemarket.ai/plugins/anthropics-claude-plugins-official/$p" }
+Write-Host "`nConnectors need your own sign-in: Claude app > Settings > Connectors (see references/connectors.md)."
+Write-Host "Find more skills/plugins live via the 'MCP & Skills Finder' connector."
