@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Mega Hub thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#fff2f2"/>
+      <stop offset="1" stop-color="#ffe3e3"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2d2d"/>
+      <stop offset="1" stop-color="#c81010"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#c81010" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <!-- red side accent -->
+  <rect x="0" y="0" width="18" height="720" fill="url(#red)"/>
+
+  <!-- top label -->
+  <text x="70" y="120" font-family="Segoe UI,Arial,sans-serif" font-weight="800" font-size="40" fill="#c81010">CLAUDE SKILL</text>
+
+  <!-- title -->
+  <text x="66" y="250" font-family="Segoe UI,Arial,sans-serif" font-weight="900" font-size="130" fill="#1a1a1a">MEGA HUB</text>
+  <text x="70" y="320" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="44" fill="#444">One skill. Every tool.</text>
+
+  <!-- glass stat cards -->
+  <g filter="url(#sh)" font-family="Segoe UI,Arial,sans-serif">
+    <g transform="translate(70,390)">
+      <rect width="260" height="150" rx="22" fill="url(#glass)" stroke="#ffd1d1"/>
+      <text x="30" y="92" font-weight="900" font-size="70" fill="#c81010">300+</text>
+      <text x="32" y="128" font-weight="700" font-size="26" fill="#333">skills</text>
+    </g>
+    <g transform="translate(355,390)">
+      <rect width="260" height="150" rx="22" fill="url(#glass)" stroke="#ffd1d1"/>
+      <text x="30" y="92" font-weight="900" font-size="70" fill="#c81010">140+</text>
+      <text x="32" y="128" font-weight="700" font-size="26" fill="#333">connectors</text>
+    </g>
+    <g transform="translate(640,390)">
+      <rect width="260" height="150" rx="22" fill="url(#glass)" stroke="#ffd1d1"/>
+      <text x="30" y="92" font-weight="900" font-size="70" fill="#c81010">140+</text>
+      <text x="32" y="128" font-weight="700" font-size="26" fill="#333">plugins</text>
+    </g>
+    <g transform="translate(925,390)">
+      <rect width="285" height="150" rx="22" fill="url(#glass)" stroke="#ffd1d1"/>
+      <text x="30" y="92" font-weight="900" font-size="70" fill="#c81010">140+</text>
+      <text x="32" y="128" font-weight="700" font-size="26" fill="#333">free AI tools</text>
+    </g>
+  </g>
+
+  <!-- bottom strip -->
+  <rect x="70" y="600" width="1140" height="70" rx="16" fill="url(#red)"/>
+  <text x="95" y="646" font-family="Segoe UI,Arial,sans-serif" font-weight="800" font-size="34" fill="#fff">⚡ FREE &amp; OPEN SOURCE  ·  github.com/puribaba007/mega-hub-skill</text>
+</svg>
