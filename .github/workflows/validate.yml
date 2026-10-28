@@ -1,0 +1,38 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Both skills have SKILL.md with frontmatter
+        run: |
+          set -e
+          for s in mega-hub code-forge; do
+            test -f "$s/SKILL.md" || { echo "missing $s/SKILL.md"; exit 1; }
+            head -1 "$s/SKILL.md" | grep -q '^---$' || { echo "$s/SKILL.md missing frontmatter"; exit 1; }
+            grep -q '^name:' "$s/SKILL.md" || { echo "$s/SKILL.md missing name:"; exit 1; }
+            grep -q '^description:' "$s/SKILL.md" || { echo "$s/SKILL.md missing description:"; exit 1; }
+            echo "ok: $s"
+          done
+
+      - name: Reference files present
+        run: |
+          set -e
+          for f in mega-hub/references/skills-catalog.md \
+                   mega-hub/references/connectors.md \
+                   mega-hub/references/plugins-and-repos.md \
+                   mega-hub/references/free-ai-tools.md \
+                   code-forge/references/cp-templates.md; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+            echo "ok: $f"
+          done
+
+      - name: Installer scripts parse
+        run: bash -n mega-hub/scripts/install.sh

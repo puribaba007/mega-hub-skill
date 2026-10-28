@@ -14,8 +14,12 @@
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 ![Tested](https://img.shields.io/badge/tested%20on-Claude%20Code%202.1.312-6C3BFF)
 [![Release](https://img.shields.io/badge/release-v1.0-success)](https://github.com/puribaba007/mega-hub-skill/releases/latest)
+[![CI](https://github.com/puribaba007/mega-hub-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/puribaba007/mega-hub-skill/actions/workflows/validate.yml)
+[![Stars](https://img.shields.io/github/stars/puribaba007/mega-hub-skill?style=social)](https://github.com/puribaba007/mega-hub-skill/stargazers)
 
-**[Install](#install-2-minutes) · [What's inside](#whats-inside) · [How it works](#good-to-know)**
+**[Install](#install-2-minutes) · [What's inside](#whats-inside) · [How it works](#good-to-know) · [Contribute](CONTRIBUTING.md)**
+
+⭐ **If this saves you time, star it** — it helps others find it.
 
 </div>
 
@@ -72,5 +76,13 @@ Then just ask Claude: *"mega hub: make a YouTube video about X"* or *"which tool
   Add them in Claude → Settings → Connectors.
 - No passwords or API keys are stored in this repo.
 
+## Contributing
+PRs welcome — add a tool, fix a name/URL, or improve the router. See [CONTRIBUTING.md](CONTRIBUTING.md),
+the [Code of Conduct](CODE_OF_CONDUCT.md) and [Security policy](SECURITY.md). Ideas and questions →
+[Discussions](https://github.com/puribaba007/mega-hub-skill/discussions).
+
+## Star history
+[![Star History Chart](https://api.star-history.com/svg?repos=puribaba007/mega-hub-skill&type=Date)](https://star-history.com/#puribaba007/mega-hub-skill&Date)
+
 ## License
-MIT. See `LICENSE`. Listed third-party skills, plugins and tools keep their own licenses.
+MIT. See [`LICENSE`](LICENSE). Listed third-party skills, plugins and tools keep their own licenses.
