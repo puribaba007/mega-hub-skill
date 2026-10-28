@@ -175,6 +175,30 @@ Tip: ask Claude "list my connectors" to see which ones you already have.
 | MCP & Skills Finder | 13,900+ servers/skills/plugins | https://www.claudemarket.ai/mcp-server/mcp |
 | Norton | Scam check | https://ai-connect.norton.com/claude/mcp |
 
+## Publishing — YouTube, Instagram & social (upload / schedule)
+Add these as plugins (`/plugin`) or connectors; each needs your own sign-in via `/mcp` → Authorize.
+| Name | Publishes to | How to add |
+|---|---|---|
+| omnisocials | YouTube, Instagram, TikTok, X, LinkedIn, FB + more (upload & schedule) | plugin `omnisocials` → `/mcp` authorize |
+| posty | YouTube, Instagram & other socials (post/schedule) | plugin `posty` → `/mcp` authorize |
+| tubealfred-youtube | YouTube management, SEO, analytics (research-heavy) | plugin `tubealfred-youtube` → `/mcp` authorize |
+| Metricool | Instagram, YouTube, TikTok, FB, LinkedIn scheduling + analytics | https://ai.metricool.com/mcp |
+| Typefully | X, LinkedIn, Threads, Bluesky, Mastodon scheduler | https://mcp.typefully.com/mcp |
+| TikTok for Business | TikTok ads/content | registry |
+| Instagram | via omnisocials / posty / Metricool (no first-party IG MCP yet) | use one of the above |
+| YouTube | via omnisocials / posty / tubealfred-youtube | use one of the above |
+
+## Background music & audio (for reels / videos)
+| Source | What | Free? |
+|---|---|---|
+| Suno | AI music generation | plugin/skill `social-media-skills:suno` (account) |
+| ElevenLabs | music, voice, SFX (connected) | connector — free tier |
+| Higgsfield | audio generation (connected) | connector |
+| AI Producer (OpusClip) | add music/SFX to edits (connected) | connector |
+| MusicGen / AudioCraft | local AI music | free, open-source |
+| Free BGM libraries | YouTube Audio Library, Pixabay Music, Free Music Archive, Uppbeat | free (check license) |
+| SFX | Freesound, Pixabay SFX | free |
+
 ## Commerce, shipping & other
 | AfterShip (TikTok Shop) | Shop sync | https://mcp.aftership.com/channels |
 |---|---|---|
