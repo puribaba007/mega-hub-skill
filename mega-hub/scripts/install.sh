@@ -3,13 +3,13 @@
 #
 # Every plugin below is verified to exist on the official marketplace
 # (https://www.claudemarket.ai/plugins/anthropics-claude-plugins-official/<name>).
-# The marketplace token used for install is "anthropics-claude-plugins-official".
+# The marketplace token used for install is "claude-plugins-official".
 # If your Claude Code already has the official marketplace under another name,
 # use the per-plugin URLs printed at the end to install any of these by hand.
 set -u
 APPLY=0; [ "${1:-}" = "--apply" ] && APPLY=1
 
-MARKET="anthropics-claude-plugins-official"
+MARKET="claude-plugins-official"
 MARKET_ADD="claude plugin marketplace add anthropics/claude-plugins-official"
 PLUGINS=(superpowers frontend-design feature-dev pr-review-toolkit hyperframes playground mcp-server-dev chrome-devtools-mcp mattpocock-skills notion)
 

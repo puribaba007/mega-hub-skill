@@ -4,12 +4,12 @@
 #
 # Every plugin below is verified to exist on the official marketplace
 # (https://www.claudemarket.ai/plugins/anthropics-claude-plugins-official/<name>).
-# The marketplace token used for install is "anthropics-claude-plugins-official".
+# The marketplace token used for install is "claude-plugins-official".
 # If your Claude Code already has the official marketplace under a different name,
 # the per-plugin URLs printed at the end let you install any of these by hand.
 param([switch]$Apply)
 
-$marketplace = 'anthropics-claude-plugins-official'
+$marketplace = 'claude-plugins-official'
 $marketplaceAdd = 'claude plugin marketplace add anthropics/claude-plugins-official'
 $plugins = @(
   'superpowers',
