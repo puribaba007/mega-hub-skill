@@ -12,6 +12,8 @@
 ![Plugins](https://img.shields.io/badge/plugins-140%2B-orange)
 ![Free tools](https://img.shields.io/badge/free%20tools-140%2B-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Tested](https://img.shields.io/badge/tested%20on-Claude%20Code%202.1.312-6C3BFF)
+[![Release](https://img.shields.io/badge/release-v1.0-success)](https://github.com/puribaba007/mega-hub-skill/releases/latest)
 
 **[Install](#install-2-minutes) · [What's inside](#whats-inside) · [How it works](#good-to-know)**
 
