@@ -1,0 +1,87 @@
+# ─────────────────────────────────────────────────────────────
+#  India Algo Bot — personal config (NSE cash, intraday MIS)
+#  Paper mode by default. Read README.md before going live.
+# ─────────────────────────────────────────────────────────────
+mode: paper            # paper | live
+broker: paper          # paper | zerodha   (live needs zerodha + env keys)
+capital: 100000        # ₹ trading capital used for sizing
+
+risk:
+  risk_per_trade_pct: 1.0      # max loss per trade = 1% of equity
+  max_daily_loss_pct: 2.0      # kill switch for the day
+  max_trades_per_day: 5
+  max_open_positions: 3
+  max_position_pct: 30         # max exposure per position (% of equity)
+  leverage: 1.0                # keep 1.0 = no intraday leverage (safer)
+  confirm_each_order: true     # live mode: ask YES before every order
+
+session:                       # IST
+  start_after: "09:30"         # skip the noisy first 15 min
+  no_new_entries_after: "14:45"
+  square_off_at: "15:10"       # bot exits before broker's MIS auto square-off
+
+universe:                      # NIFTY 50 liquid names (edit freely)
+  - RELIANCE
+  - HDFCBANK
+  - ICICIBANK
+  - INFY
+  - TCS
+  - SBIN
+  - AXISBANK
+  - KOTAKBANK
+  - LT
+  - ITC
+  - BHARTIARTL
+  - HINDUNILVR
+  - BAJFINANCE
+  - MARUTI
+  - TATAMOTORS
+  - TATASTEEL
+  - SUNPHARMA
+  - M&M
+  - NTPC
+  - POWERGRID
+
+scanner:
+  top_n: 5
+  min_price: 100
+  max_price: 10000
+  min_avg_turnover_cr: 100     # 20-day avg daily turnover in ₹ crore
+  min_atr_pct: 1.0             # needs enough daily range to day-trade
+
+strategy:
+  name: orb                    # orb | vwap_pullback
+  interval: 5m
+  orb_minutes: 15
+  atr_period: 14
+  sl_atr_mult: 1.5
+  target_r: 2.0                # target = 2 × risk
+  allow_short: true
+
+news:
+  enabled: true                # skip stocks with red-flag headlines
+  red_flags: [fraud, raid, sebi order, resign, default, downgrade, probe, pledge, insolvency, ban]
+
+costs:                         # Zerodha-style intraday equity charges (verify yearly)
+  brokerage_flat: 20
+  brokerage_pct: 0.03
+  stt_sell_pct: 0.025
+  exchange_txn_pct: 0.00297
+  sebi_per_crore: 10
+  stamp_buy_pct: 0.003
+  gst_pct: 18
+  slippage_bps: 3
+
+alerts:
+  telegram: false              # set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID env vars
+
+holidays:                      # NSE trading holidays — ONLY fixed-date ones listed here.
+  # Add festival holidays (Holi, Diwali, Eid, etc.) from the NSE holiday circular
+  # every year: https://www.nseindia.com/resources/exchange-communication-holidays
+  - "2026-01-26"   # Republic Day
+  - "2026-04-14"   # Ambedkar Jayanti
+  - "2026-05-01"   # Maharashtra Day
+  - "2026-10-02"   # Gandhi Jayanti
+  - "2026-12-25"   # Christmas
+
+journal_dir: journal

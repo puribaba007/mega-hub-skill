@@ -41,6 +41,7 @@ Reply in the user's language (Hindi/Hinglish if they wrote in Hindi).
 | **Publish to Instagram** | `social-media-skills:instagram-reels-publishing`, `instagram-growth`, `posty:posty`, `omnisocials:omnisocials` | omnisocials, posty, Metricool (each needs `/mcp` auth) |
 | **Images / design / thumbnails** | `social-media-skills:thumbnail-design`, `image-prompt`, `nano-banana`, `flux`, `ideogram`, `canva`, `frontend-design`, `fal-ai-media` | Canva, Figma, Adobe, Shutterstock |
 | **Day trading** | `trader-scanner` → `trader-news` → `trader-entry` → `trader-exit` → `trader-timemachine` → `trader-budget` → `trader-risk` → `trader-broker`; plus `trader-alerts`, `trader-analyst`, `trader-pelosi` | Alpha Vantage, Financial Datasets, Webull, Clear Street, LunarCrush |
+| **Indian market algo bot (NSE)** | `india-algo-trader` (this repo: `india-algo-bot/` — scan, backtest, paper/live run), then the day-trading chain above for analysis | Zerodha Kite Connect (env keys), Telegram alerts; free data: yfinance |
 | **Finance / accounting (CFO)** | `anthropic-skills:xlsx`, `trader-analyst`, `dataviz` | QuickBooks, Zoho Books, Rillet, NumbersGame, Mollie, Deel |
 | **Data / analytics / BI** | `dataviz`, `anthropic-skills:xlsx`, `agentdb-vector-search`, `anthropic-skills:deep-research` | PostHog, dbt, Blaze SQL, Dremio, Google Sheets, Supabase, Neon |
 | **Coding / engineering (CTO)** | `superpowers:test-driven-development`, `superpowers:systematic-debugging`, `superpowers:subagent-driven-development`, `code-review`, `simplify`, `security-review`, `pair-programming`, `sparc-methodology`, `v3-*`; plugin `mattpocock-skills` (grill/spec/ticket) | GitHub (gh CLI), Atlassian, Exa, Microsoft Learn |
@@ -62,6 +63,7 @@ Reply in the user's language (Hindi/Hinglish if they wrote in Hindi).
 
 - **YouTube video end-to-end:** yt-plan → yt-script → voicestudio (voice) → hyperframes / media-use (video) → yt-package + yt-seo → yt-chapters → yt-shorts (repurpose) → tred-iq-ceo (weekly review).
 - **Trade of the day:** trader-scanner → trader-news → trader-entry → trader-exit → trader-timemachine → trader-budget → trader-risk → trader-broker (paper by default, always asks first).
+- **India algo day (NSE):** `algobot scan` → news filter → `algobot backtest` → `algobot run` (paper) → journal review with `dataviz` (see `india-algo-trader`).
 - **Product launch:** brainstorming → campaign-and-launch-planning → content-calendar → hook-writer / reels-script / carousel-writer → scheduling-and-queue → analytics-and-reporting.
 - **Ship code:** brainstorming → writing-plans → test-driven-development → code-review → verification-before-completion → finishing-a-development-branch.
 

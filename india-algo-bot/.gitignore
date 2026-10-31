@@ -1,0 +1,6 @@
+journal/
+.env
+*.pyc
+__pycache__/
+data_cache/
+STOP

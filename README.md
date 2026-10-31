@@ -38,6 +38,7 @@ reverse engineering / CTF, and competitive programming (Codeforces, LeetCode, At
 |---|---|
 | `mega-hub/SKILL.md` | Router: role → best skill + connector, ready-made pipelines |
 | `code-forge/SKILL.md` | Advanced coding skill: Replica (UI rebuild), authorized reverse engineering/CTF, competitive programming (Codeforces/LeetCode), pro workflow |
+| `india-algo-trader/SKILL.md` + `india-algo-bot/` | Personal NSE intraday algo bot: scanner, news filter, ORB/VWAP strategies, backtest with Indian charges, risk limits, paper + Zerodha live |
 | `references/skills-catalog.md` | 300+ skills by category |
 | `references/connectors.md` | 140+ real MCP connectors with URLs |
 | `references/plugins-and-repos.md` | 140+ plugins + install pattern |

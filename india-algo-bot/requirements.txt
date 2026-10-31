@@ -1,0 +1,7 @@
+pandas>=2.0
+numpy>=1.24
+PyYAML>=6.0
+requests>=2.31
+yfinance>=0.2.40      # free NSE data (delayed) for scan / backtest / paper
+# kiteconnect>=5.0    # uncomment only for live trading with Zerodha
+pytest>=8.0
