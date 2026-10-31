@@ -3,6 +3,14 @@
 All notable changes to this project are documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/); this project uses simple versions.
 
+## [Unreleased]
+### Added
+- **india-algo-trader** skill + `india-algo-bot/` — personal intraday algo system for NSE cash:
+  scanner, news red-flag filter, ORB and VWAP-pullback strategies, time-machine backtest
+  (next-bar fills, slippage, STT/stamp/GST charges), risk manager (1%/trade, 2% daily stop,
+  kill switch), paper broker (default) and Zerodha Kite Connect live adapter behind three locks.
+  18 tests; CI runs them.
+
 ## [1.0] - 2026-10-28
 ### Added
 - **mega-hub** skill — router + catalog: 300+ skills, 140+ connectors, 140+ plugins, 140+ free AI tools.

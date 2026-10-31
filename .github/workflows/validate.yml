@@ -14,7 +14,7 @@ jobs:
       - name: Both skills have SKILL.md with frontmatter
         run: |
           set -e
-          for s in mega-hub code-forge; do
+          for s in mega-hub code-forge india-algo-trader; do
             test -f "$s/SKILL.md" || { echo "missing $s/SKILL.md"; exit 1; }
             head -1 "$s/SKILL.md" | grep -q '^---$' || { echo "$s/SKILL.md missing frontmatter"; exit 1; }
             grep -q '^name:' "$s/SKILL.md" || { echo "$s/SKILL.md missing name:"; exit 1; }
@@ -36,3 +36,13 @@ jobs:
 
       - name: Installer scripts parse
         run: bash -n mega-hub/scripts/install.sh
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: India algo bot tests
+        working-directory: india-algo-bot
+        run: |
+          pip install pandas numpy PyYAML requests pytest
+          python -m pytest -q tests
